@@ -1,0 +1,412 @@
+.contact-page {
+  min-height: 100vh;
+}
+
+/* ── Info Panel ── */
+.contact-info-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+  padding: var(--spacing-32) var(--spacing-8);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.contact-info-panel .contact-form-wrapper {
+  padding: 0 var(--spacing-10);
+  border-radius: 4px;
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-secondary);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--spacing-4);
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form-title {
+  font-family: var(--font-headline);
+  font-size: var(--text-3xl);
+  color: var(--text-on-surface);
+  margin-bottom: var(--spacing-8);
+  font-weight: 400;
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  position: relative;
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-on-surface-variant);
+  transition: color var(--transition-base);
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field:focus-within label {
+  color: var(--color-secondary);
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field input,
+.contact-info-panel .contact-form-wrapper .contact-form .form-field select,
+.form-field textarea {
+  background-color: var(--bg-surface-container-high);
+  border: none;
+  color: var(--text-on-surface);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  padding: var(--spacing-3) var(--spacing-2);
+  outline: none;
+  transition: border-color var(--transition-base);
+  width: 100%;
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field input::placeholder,
+.contact-info-panel .contact-form-wrapper .contact-form .form-field textarea::placeholder {
+  color: rgba(210, 195, 191, 0.35);
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field input:focus,
+.contact-info-panel .contact-form-wrapper .contact-form .form-field select:focus,
+.contact-info-panel .contact-form-wrapper .contact-form .form-field textarea:focus {
+  border-bottom-color: var(--color-secondary);
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field select option {
+  background-color: var(--bg-surface-container-high);
+  color: var(--text-on-surface);
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-field textarea {
+  resize: none;
+  min-height: 96px;
+  line-height: 1.6;
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+}
+
+.contact-info-panel .contact-form-wrapper .contact-form .form-submit-btn {
+  margin-top: var(--spacing-4);
+  width: 100%;
+  padding: var(--spacing-5) var(--spacing-8);
+  font-size: var(--text-sm);
+}
+
+/* ── Info Cards (Address / Phone) ── */
+.contact-info-panel .contact-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-img-wrapper {
+  width: 100%;
+  height: 450px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-img-wrapper img {
+  width: 100%;
+  border-radius: 4px;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-img-wrapper .contact-detail-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.488), transparent);
+}
+
+
+.contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper {
+  display: flex;
+  gap: var(--spacing-6);
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card {
+  width: 50%;
+  padding: var(--spacing-8) var(--spacing-8);
+  border-radius: 4px;
+  transition: background-color var(--transition-base);
+}
+
+
+.contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card .detail-card-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-3);
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card .detail-card-title {
+  font-family: var(--font-headline);
+  font-size: var(--text-xl);
+  color: var(--text-on-surface);
+  margin-bottom: var(--spacing-3);
+  font-weight: 400;
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card .detail-card-value {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-on-surface-variant);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card .detail-card-value a {
+  color: var(--text-on-surface-variant);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card .detail-card-value a:hover {
+  color: var(--color-secondary);
+}
+
+.contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card .detail-hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2) var(--spacing-6);
+  margin-top: var(--spacing-4);
+}
+
+.detail-hours-row {
+  display: contents;
+}
+
+.detail-hours-day {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-on-surface-variant);
+}
+
+.detail-hours-time {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-primary-accent);
+  text-align: right;
+}
+
+/* ── WhatsApp Section ── */
+.contact-page .whatsapp-section {
+  padding: var(--spacing-20) var(--spacing-8);
+  background-color: var(--bg-surface-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-page .whatsapp-section .whatsapp-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: var(--spacing-10);
+}
+
+.contact-page .whatsapp-section .whatsapp-inner .whatsapp-text-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-3);
+  text-align: center;
+
+}
+
+.contact-page .whatsapp-section .whatsapp-inner .whatsapp-text-title {
+  font-family: var(--font-headline);
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
+  color: var(--text-on-surface);
+  font-weight: 400;
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+
+}
+
+.contact-page .whatsapp-section .whatsapp-inner .whatsapp-text-desc {
+  font-size: var(--text-base);
+  color: var(--text-on-surface-variant);
+  max-width: 560px;
+  line-height: 1.7;
+  margin: 0;
+  text-align: center;
+}
+
+.contact-page .whatsapp-section .whatsapp-inner .whatsapp-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: #25D366;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact-page .whatsapp-section .whatsapp-inner .whatsapp-icon-wrap svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+.contact-page .whatsapp-section .whatsapp-inner .whatsapp-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-8);
+}
+
+.contact-page .whatsapp-section .whatsapp-inner .btn-whatsapp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background-color: #25D366;
+  color: #000;
+  font-family: var(--font-body);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius-full);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.contact-page .whatsapp-section .whatsapp-inner .btn-whatsapp-pill:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.3);
+}
+
+/* ── Boutique Locations ── */
+.contact-page .boutique-section {
+  padding: var(--spacing-20) var(--spacing-8);
+  margin: 0 auto;
+  background-image: radial-gradient(ellipse at 60% 40%, rgba(43, 30, 26, 0.65) 0%, transparent 70%),
+    linear-gradient(160deg, rgba(28, 17, 13, 0.92) 0%, rgba(28, 17, 13, 0.4) 100%),
+    url(/images/product_velvet.png);
+}
+
+.contact-page .boutique-section .boutique-section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.contact-page .boutique-section .boutique-section-header {
+  margin-bottom: var(--spacing-12);
+}
+
+.contact-page .boutique-section .boutique-section-header .boutique-eyebrow {
+  font-family: var(--font-headline);
+  font-size: var(--text-4xl);
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-4);
+  font-style: italic;
+}
+
+.contact-page .boutique-section .boutique-section-header .boutique-subtitle {
+  font-size: var(--text-base);
+  color: var(--text-on-surface-variant);
+  max-width: 520px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-page .boutique-section .boutique-section-header .boutique-card-name {
+  font-family: var(--font-headline);
+  font-size: var(--text-2xl);
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin: var(--spacing-3) 0;
+}
+
+.contact-page .boutique-section .boutique-card {
+  width: 50%;
+  background-color: rgb(37 25 21 / 0.5);
+  backdrop-filter: blur(12px);
+  padding: var(--spacing-10);
+  border-radius: 4px;
+  transition: background-color var(--transition-base), transform var(--transition-base);
+  cursor: default;
+}
+
+.contact-page .boutique-section .boutique-card h3 {
+  font-family: var(--font-headline);
+  font-size: var(--text-2xl);
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin: var(--spacing-3) 0;
+}
+
+
+.contact-page .boutique-section .boutique-card .boutique-hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  padding: var(--spacing-4) var(--spacing-3);
+  border-bottom: 1px solid var(--border-outline-variant);
+}
+
+.contact-page .boutique-section .boutique-card .boutique-hours-row .boutique-hours-day {
+  color: var(--text-on-surface-variant);
+}
+
+.contact-page .boutique-section .boutique-card .boutique-hours-row .boutique-hours-time {
+  color: var(--text-primary-accent);
+}
+
+.contact-page .boutique-section .boutique-appointment-note {
+  margin-top: var(--spacing-8);
+  padding: var(--spacing-5) var(--spacing-6);
+  background-color: rgba(233, 195, 73, 0.07);
+  border-left: 2px solid var(--color-secondary);
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-on-surface-variant);
+  font-style: italic;
+  line-height: 1.6;
+}
+
