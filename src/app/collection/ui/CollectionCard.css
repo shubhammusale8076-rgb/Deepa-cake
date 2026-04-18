@@ -91,3 +91,31 @@
   color: var(--color-secondary);
   margin: 0;
 }
+
+/* Small Mobile */ 
+@media (max-width: 480px) {
+  .collection-card {
+    width: 100%;
+  }
+
+} 
+ 
+/* Large Mobile / Small Tablet */ 
+@media (min-width: 481px) and (max-width: 767px) {
+  .collection-card {
+    width: 48%;
+  }
+} 
+ 
+/* Tablets */ 
+@media (min-width: 768px) and (max-width: 991px) {
+  .collection-card {
+    width: 48%;
+  }
+} 
+ 
+/* Desktop */ 
+@media (min-width: 992px) and (max-width: 1199px) { } 
+ 
+/* Large Desktop */ 
+@media (min-width: 1200px) { }

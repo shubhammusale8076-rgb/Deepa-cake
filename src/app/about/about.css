@@ -9,13 +9,13 @@
 }
 
 /* ── Our Story ── */
-.about-story {
+.about-page .about-story {
   padding: var(--spacing-24) var(--spacing-8);
   background-color: var(--bg-surface-container-low);
   position: relative;
 }
 
-.about-story-grid {
+.about-page .about-story .about-story-grid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-.about-story-label {
+.about-page .about-story .about-story-grid .about-story-label {
   font-family: var(--font-body);
   font-size: var(--text-xs);
   font-weight: var(--font-bold);
@@ -34,7 +34,7 @@
   margin-bottom: var(--spacing-4);
 }
 
-.about-story-title {
+.about-page .about-story .about-story-grid .about-story-title {
   font-family: var(--font-headline);
   font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
   color: var(--text-on-surface);
@@ -43,12 +43,12 @@
   line-height: 1.15;
 }
 
-.about-story-title em {
+.about-page .about-story .about-story-grid .about-story-title em {
   font-style: italic;
   color: var(--text-primary-accent);
 }
 
-.about-story-body {
+.about-page .about-story .about-story-grid .about-story-body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--text-on-surface-variant);
@@ -56,11 +56,11 @@
   margin-bottom: var(--spacing-6);
 }
 
-.about-story-body:last-child {
+.about-page .about-story .about-story-grid .about-story-body:last-child {
   margin-bottom: 0;
 }
 
-.about-story-tagline {
+.about-page .about-story .about-story-grid .about-story-tagline {
   font-family: var(--font-headline);
   font-size: var(--text-xl);
   color: var(--text-primary-accent);
@@ -71,32 +71,32 @@
   border-left: 2px solid var(--color-secondary);
 }
 
-.about-story-image-wrap {
+.about-page .about-story .about-story-grid .about-story-image-wrap {
   position: relative;
   border-radius: 4px;
   overflow: hidden;
   height: 550px;
 }
 
-.about-story-image-wrap img {
+.about-page .about-story .about-story-grid .about-story-image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
 }
 
-.about-story-image-wrap:hover img {
+.about-page .about-story .about-story-grid .about-story-image-wrap:hover img {
   transform: scale(1.04);
 }
 
-.about-story-image-overlay {
+.about-page .about-story .about-story-grid .about-story-image-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 60%, rgba(28, 17, 13, 0.6) 100%);
   pointer-events: none;
 }
 
-.about-story-year-badge {
+.about-page .about-story .about-story-grid .about-story-year-badge {
   position: absolute;
   bottom: var(--spacing-6);
   left: var(--spacing-6);
@@ -110,7 +110,7 @@
   line-height: 1;
 }
 
-.about-story-year-badge span {
+.about-page .about-story .about-story-grid .about-story-year-badge span {
   display: block;
   font-family: var(--font-body);
   font-size: var(--text-xs);
@@ -178,7 +178,7 @@
   height: 300px;
   position: relative;
   box-shadow: var(--shadow-btn-premium);
-  border-radius: var(--radius-2xl); 
+  border-radius: var(--radius-2xl);
 }
 
 .about-page .about-craft .about-craft-grid .craft-card .craft-card-ima-wrapper {
@@ -186,7 +186,7 @@
   height: 100%;
   border-radius: var(--radius-2xl);
   overflow: hidden;
-  
+
 
 }
 
@@ -216,9 +216,10 @@
   grid-column: span 2 / span 2;
   grid-row-start: 2;
 }
+
 /* radial-gradient(ellipse at 60% 40%, rgba(43, 30, 26, 0.65) 0%, transparent 70%), */
 .about-page .about-craft .about-craft-grid .craft-card .craft-card-overlay {
-  background: linear-gradient( 0deg, rgba(28, 17, 13, 0.92) 0%, rgba(28, 17, 13, 0.4) 100%);
+  background: linear-gradient(0deg, rgba(28, 17, 13, 0.92) 0%, rgba(28, 17, 13, 0.4) 100%);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -233,7 +234,7 @@
   left: 0px;
 
   padding: var(--spacing-8);
-  border-radius: var(--radius-2xl); 
+  border-radius: var(--radius-2xl);
 }
 
 
@@ -255,7 +256,7 @@
 }
 
 .about-page .about-craft .about-craft-grid .craft-card.chocolate .craft-card-content .craft-card-desc,
-.about-page .about-craft .about-craft-grid .craft-card.butter .craft-card-content .craft-card-desc{
+.about-page .about-craft .about-craft-grid .craft-card.butter .craft-card-content .craft-card-desc {
   width: 60%;
 }
 
@@ -299,7 +300,7 @@
 
 
 
- .about-page .about-artisans .artisan-img-wrap{
+.about-page .about-artisans .artisan-img-wrap {
   width: 60%;
   height: 500px;
   overflow: hidden;
@@ -307,7 +308,7 @@
   border-radius: var(--radius-2xl);
 }
 
- .about-page .about-artisans .artisan-img-wrap .artisan-img {
+.about-page .about-artisans .artisan-img-wrap .artisan-img {
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
@@ -318,7 +319,7 @@
   transform: scale(1.06);
 }
 
- .about-page .about-artisans .artisan-img-wrap .artisan-img-overlay {
+.about-page .about-artisans .artisan-img-wrap .artisan-img-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 40%, rgba(28, 17, 13, 0.65) 100%);
@@ -421,30 +422,275 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .about-craft-grid {
+
+  .about-page .about-story .about-story-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8);
+  }
+
+  .about-page .about-story .about-story-grid .about-story-image-wrap {
+    height: 450px;
+  }
+
+  .about-page .about-craft .about-craft-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .craft-card.chocolate,
+  .craft-card.butter {
+    grid-column: span 2;
+  }
+
+  .about-page .about-craft .about-craft-grid .craft-card.vanilla,
+  .about-page .about-craft .about-craft-grid .craft-card.flour {
+    grid-column: span 1;
+  }
+
+  .about-page .about-artisans .artisan-card {
+    width: 95%;
+    gap: var(--spacing-6);
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-artisans-grid {
+  .about-page .about-artisans .artisan-img-wrap {
+    height: 420px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .about-page .about-story {
+    padding: var(--spacing-20) var(--spacing-6);
+  }
+
+  .about-page .about-story .about-story-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+  }
+
+  /* image comes on top */
+  .about-page .about-story .about-story-grid .about-story-image-wrap {
+    order: -1;
+    height: 420px;
+  }
+
+  .about-page .about-story .about-story-grid .about-story-tagline {
+    margin-top: var(--spacing-6);
+  }
+
+  .about-page .about-craft .about-craft-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+  }
+
+  .about-page .about-craft .about-craft-grid .craft-card {
+    height: 260px;
+  }
+
+  .about-page .about-craft .about-craft-grid .craft-card.chocolate,
+  .about-page .about-craft .about-craft-grid .craft-card.butter {
+    grid-column: span 2;
+  }
+
+  .about-page .about-craft .about-craft-grid .craft-card .craft-card-content .craft-card-desc {
+    width: 100% !important;
+  }
+
+  .about-page .about-artisans {
+    padding: var(--spacing-24) var(--spacing-6);
+  }
+
+  .about-page .about-artisans .artisan-card {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-6);
+  }
+
+  .about-page .about-artisans .artisan-img-wrap {
+    width: 100%;
+    height: 380px;
+  }
+
+  .about-page .about-artisans .artisan-card .artisan-body {
+    padding: var(--spacing-4) var(--spacing-2);
   }
 }
 
 @media (max-width: 768px) {
-  .about-story-grid {
+  .about-page .about-craft .about-craft-grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-5);
   }
 
-  .about-story-image-wrap {
+  .about-page .about-craft .about-craft-grid .craft-card {
+    height: 240px;
+  }
+
+  /* remove all custom positioning */
+  .about-page .about-craft .about-craft-grid .craft-card,
+  .about-page .about-craft .about-craft-grid .craft-card.chocolate,
+  .about-page .about-craft .about-craft-grid .craft-card.vanilla,
+  .about-page .about-craft .about-craft-grid .craft-card.flour,
+  .about-page .about-craft .about-craft-grid .craft-card.butter {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+  }
+
+  .about-page .about-craft .about-craft-grid .craft-card .craft-card-content {
+    padding: var(--spacing-6);
+  }
+
+  .about-page .about-craft .about-craft-grid .craft-card .craft-card-content .craft-card-name {
+    font-size: var(--text-xl);
+  }
+
+  .craft-card .craft-card-content .craft-card-desc {
+    font-size: var(--text-sm);
+    width: 100%;
+  }
+
+  .about-page .about-story {
+    padding: var(--spacing-16) var(--spacing-5);
+  }
+
+  .about-page .about-story .about-story-grid {
+    gap: var(--spacing-10);
+  }
+
+  .about-page .about-story .about-story-grid .about-story-title {
+    font-size: var(--text-3xl);
+    line-height: 1.2;
+  }
+
+  .about-page .about-story .about-story-grid .about-story-body {
+    font-size: var(--text-sm);
+    line-height: 1.7;
+  }
+
+  .about-page .about-story .about-story-grid .about-story-image-wrap {
     height: 360px;
-    order: -1;
   }
 
-  .about-craft-grid {
+  .about-page .about-story .about-story-grid .about-story-year-badge {
+    font-size: var(--text-xl);
+    padding: var(--spacing-2) var(--spacing-4);
+  }
+
+   .about-page .about-artisans {
+    padding: var(--spacing-20) var(--spacing-5);
+  }
+
+  .about-page .about-artisans .about-artisans-header {
+    margin-bottom: var(--spacing-8);
+  }
+
+  .about-page .about-artisans .about-artisans-title {
+    font-size: var(--text-3xl);
+  }
+
+  .about-page .about-artisans .artisan-img-wrap {
+    height: 320px;
+  }
+
+  .about-page .about-artisans .artisan-card .artisan-body .artisan-name {
+    font-size: var(--text-xl);
+  }
+
+  .about-page .about-artisans .artisan-card .artisan-body .artisan-bio {
+    font-size: var(--text-xs);
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .about-story {
+    padding: var(--spacing-12) var(--spacing-4);
+  }
+
+  .about-page .about-story .about-story-grid {
+    gap: var(--spacing-8);
+  }
+
+  .about-page .about-story .about-story-grid .about-story-title {
+    font-size: var(--text-2xl);
+  }
+
+
+  .about-page .about-story .about-story-grid .about-story-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+  }
+
+  .about-page .about-story .about-story-grid .about-story-body {
+    font-size: var(--text-xs);
+  }
+
+  .about-page .about-story .about-story-grid .about-story-tagline {
+    font-size: var(--text-lg);
+    padding-left: var(--spacing-4);
+  }
+
+  .about-page .about-story .about-story-grid .about-story-image-wrap {
+    height: 280px;
+  }
+
+  .about-page .about-story .about-story-grid .about-story-year-badge {
+    font-size: var(--text-lg);
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+
+  .about-page .about-story .about-story-grid .about-story-year-badge span {
+    font-size: 9px;
+  }
+
+  .about-page .about-craft .about-craft-grid {
     grid-template-columns: 1fr;
   }
 
-  .about-artisans-grid {
-    grid-template-columns: 1fr;
+  .about-page .about-craft .about-craft-grid .craft-card.chocolate,
+  .about-page .about-craft .about-craft-grid .craft-card.butter {
+    grid-column: span 1 / span 1;
+  }
+
+  .about-page .about-craft .about-craft-grid .craft-card .craft-card-content .craft-card-desc {
+    width: 100%;
+  }
+
+  .about-page .about-artisans {
+    padding: var(--spacing-16) var(--spacing-4);
+  }
+
+  .about-page .about-artisans .about-artisans-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+  }
+
+  .about-page .about-artisans .about-artisans-title {
+    font-size: var(--text-2xl);
+  }
+
+  .about-page .about-artisans .artisan-img-wrap {
+    height: 260px;
+  }
+
+  .about-page .about-artisans .artisan-card {
+    gap: var(--spacing-5);
+  }
+
+  .about-page .about-artisans .artisan-card .artisan-body {
+    padding: var(--spacing-3) 0;
+  }
+
+  .about-page .about-artisans .artisan-card .artisan-body .artisan-role {
+    font-size: 10px;
+  }
+
+  .about-page .about-artisans .artisan-card .artisan-body .artisan-name {
+    font-size: var(--text-lg);
+  }
+
+  .about-page .about-artisans .artisan-card .artisan-body .artisan-bio {
+    font-size: 11px;
   }
 }

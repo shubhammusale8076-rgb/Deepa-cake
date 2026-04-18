@@ -410,3 +410,82 @@
   line-height: 1.6;
 }
 
+/* Small Mobile */ 
+@media (max-width: 480px) {
+  .contact-info-panel {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-16) var(--spacing-4);
+  }
+  .contact-info-panel .contact-form-wrapper {
+    padding: 0;
+  }
+  .contact-info-panel .contact-form-wrapper .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
+  .contact-info-panel .contact-details-wrapper .contact-detail-img-wrapper {
+    height: 300px;
+  }
+  .contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper {
+    flex-direction: column;
+  }
+  .contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card {
+    width: 100%;
+  }
+  .contact-page .whatsapp-section .whatsapp-inner {
+    gap: var(--spacing-6);
+  }
+  .contact-page .whatsapp-section .whatsapp-inner .whatsapp-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-page .boutique-section .boutique-section-wrapper {
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+  .contact-page .boutique-section .boutique-card {
+    width: 100%;
+    padding: var(--spacing-6);
+  }
+} 
+ 
+/* Large Mobile / Small Tablet */ 
+@media (min-width: 481px) and (max-width: 767px) {
+  .contact-info-panel {
+    grid-template-columns: 1fr;
+  }
+  .contact-info-panel .contact-form-wrapper {
+    padding: 0;
+  }
+  .contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper {
+    flex-direction: column;
+  }
+  .contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card {
+    width: 100%;
+  }
+  .contact-page .boutique-section .boutique-section-wrapper {
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+  .contact-page .boutique-section .boutique-card {
+    width: 100%;
+  }
+} 
+ 
+/* Tablets */ 
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact-info-panel .contact-form-wrapper {
+    padding: 0 var(--spacing-4);
+  }
+  .contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper {
+    flex-direction: column;
+  }
+  .contact-info-panel .contact-details-wrapper .contact-detail-card-wrapper .contact-detail-card {
+    width: 100%;
+  }
+} 
+ 
+/* Desktop */ 
+@media (min-width: 992px) and (max-width: 1199px) { } 
+ 
+/* Large Desktop */ 
+@media (min-width: 1200px) { }

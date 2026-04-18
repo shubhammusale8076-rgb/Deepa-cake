@@ -293,11 +293,54 @@ export default function OrderForm() {
     setFiles(Array.from(e.dataTransfer.files));
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!agreed) return;
-    setSubmitted(true);
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (!agreed) return;
+
+  const message = `CUSTOM CAKE ORDER REQUEST
+
+━━━━━━━━━━━━━━━
+Customer Details
+• Name: ${personal.firstName} ${personal.lastName}
+• Phone: ${personal.phone || "Not provided"}
+• Email: ${personal.email}
+• Address: ${personal.address || "Not provided"}
+
+━━━━━━━━━━━━━━━
+Event Details
+• Event: ${event.eventType}
+• Date: ${event.eventDate}
+• Guests: ${event.guestCount}
+• Venue: ${event.venue || "Not provided"}
+
+━━━━━━━━━━━━━━━
+Cake Specifications
+• Tiers: ${cake.tiers}
+• Size: ${cake.size}
+• Finish: ${cake.finish || "Not selected"}
+• Flavours: ${cake.flavours.join(", ") || "Not selected"}
+• Dietary: ${cake.dietary.join(", ") || "None"}
+
+━━━━━━━━━━━━━━━
+Design Vision
+• Theme: ${vision.colourPalette || "Not provided"}
+• Description: ${vision.inspiration || "Not provided"}
+• References: ${vision.referenceLinks || "None"}
+
+━━━━━━━━━━━━━━━
+Budget
+• Estimated Budget: ₹${budget}
+
+━━━━━━━━━━━━━━━
+
+📸 Reference images will be shared in chat.
+
+Please review and confirm. Thank you!`;
+
+  const url = `https://wa.me/917218608016?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank", "noopener,noreferrer");
+};
 
   const STEP_META = [
     { eyebrow: "Step 1 of 5", title: "Personal Information" },

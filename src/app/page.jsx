@@ -16,8 +16,8 @@ export default function Home() {
           highlight="Celebrations"
           subtitle="Premium cakes, cookies, and biscuits made with love"
           backgroundImage="/images/herobg.png"
-          primaryText="Order Now"
-          secondaryText="Order on WhatsApp"
+          primaryText="Explore Cakes"
+          secondaryText="Quick Order on WhatsApp"
         />
         <CategoryList />
 
