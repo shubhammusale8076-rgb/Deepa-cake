@@ -1,16 +1,25 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CollectionCard from '@/app/collection/ui/CollectionCard';
 import FooterCta from '@/app/home/ui/FooterCta';
 import './Collection.css';
 import HeroSection from '@/components/HeroSection';
 import { productsData } from '@/data/products';
+import { useSearchParams } from 'next/navigation';
 
 const filterButton = ["All", "Cakes", "Biscuits", "Cookies"];
 
 export default function CollectionPage() {
   const [activeFilter, setActiveFilter] = useState("All");
+  const searchParams = useSearchParams();
+  const categoryFromURL = searchParams.get("category");
+
+  useEffect(() => {
+    if (categoryFromURL && filterButton.includes(categoryFromURL)) {
+      setActiveFilter(categoryFromURL);
+    }
+  }, [categoryFromURL]);
 
   const filteredData = activeFilter === "All"
     ? productsData

@@ -1,6 +1,7 @@
 "use client"
 
 import useInView from '@/hooks/useInView';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 
@@ -12,12 +13,22 @@ const categories = [
 
 export default function CategoryList() {
 
-    const [ref, visible] = useInView(150);
+  const [ref, visible] = useInView(150);
+
+  const router = useRouter();
+
+  const handleRedirect = (category) => {
+    router.push(`/collection?category=${category}`);
+  };
+
   return (
     <section ref={ref} className={`category-section section-padding ${visible ? "show" : ""}`}>
       <div className="category-grid">
         {categories.map((cat) => (
-          <div key={cat.id} className="category-item">
+          <div key={cat.id} className="category-item"
+            onClick={() => handleRedirect(cat.name)}
+            style={{ cursor: "pointer" }}
+          >
             <div className="category-image-wrap">
               <img src={cat.image} alt={cat.name} className="category-image" />
               <div className="category-overlay"></div>

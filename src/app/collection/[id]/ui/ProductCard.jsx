@@ -3,7 +3,7 @@
 import useInView from '@/hooks/useInView';
 import React from 'react';
 
-export default function ProductCard({ subtitle, title, description, image, reverseLayout }) {
+export default function ProductCard({ subtitle, title, description, image, reverseLayout,price }) {
 
   const [ref, visible] = useInView();
   return (
@@ -15,7 +15,7 @@ export default function ProductCard({ subtitle, title, description, image, rever
         <p className="product-subtitle">{subtitle}</p>
         <h2 className="product-title">{title}</h2>
         <p className="product-desc text-variant">{description}</p>
-        <button className="btn btn-primary">Order Now</button>
+        <p className="product-price">{price}</p>
       </div>
     </article>
   );

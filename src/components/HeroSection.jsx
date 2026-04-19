@@ -1,3 +1,7 @@
+"use client"
+
+
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 
@@ -7,10 +11,30 @@ const HeroSection = ({
   subtitle,
   primaryText,
   secondaryText,
-  onPrimaryClick,
-  onSecondaryClick,
   backgroundImage,
 }) => {
+
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/collection');
+  };
+
+  const handleWhatsAppMessage = () => {
+    const message = `Hello Deepas Chocotales Homebakery,
+
+I’d like to inquire about your cakes.
+
+• Custom cake orders
+• Bulk orders
+• Available designs
+
+Please assist me. Thank you!`;
+
+    const url = `https://wa.me/917218608016?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
   return (
     <section
       className="hero-section parallax-bg"
@@ -29,11 +53,11 @@ const HeroSection = ({
 
         {primaryText && secondaryText && (
           <div className="hero-action-wrapper">
-            <button className="btn-primary" onClick={onPrimaryClick}>
+            <button className="btn-primary" onClick={handleClick}>
               {primaryText}
             </button>
 
-            <button className="btn-outline" onClick={onSecondaryClick}>
+            <button className="btn-outline" onClick={handleWhatsAppMessage}>
               {secondaryText}
             </button>
           </div>

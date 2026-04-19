@@ -174,6 +174,13 @@
   margin-bottom: var(--spacing-4);
 }
 
+
+.product-price {
+  color: var(--color-secondary);
+  font-size: var(--text-4xl);
+  font-style: italic ;
+}
+
 .product-desc {
   margin-bottom: var(--spacing-8);
 }
