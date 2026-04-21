@@ -4,7 +4,7 @@ const INGREDIENTS = [
     icon: '🍫',
     name: 'Belgian Excellence',
     origin: 'Flanders, Belgium',
-    image: '/Images/About-Us/chocolate-img.png',
+    image: '/Images/About-Us/chocolate-img.webp',
     description:
       'Our signature 72% dark chocolate is sourced from ethical estates in the heart of Flanders, chosen for its complex notes of red fruit and smoke.',
   },
@@ -12,7 +12,7 @@ const INGREDIENTS = [
     id: 'vanilla',
     icon: '🌿',
     name: 'Pure Orchid Vanilla',
-    image: '/Images/About-Us/vanilla-img.png',
+    image: '/Images/About-Us/vanilla-img.webp',
     origin: 'Madagascar',
     description:
       'Sustainably harvested Madagascar beans, aged to perfection for an aroma that lingers like a classic melody.',
@@ -21,7 +21,7 @@ const INGREDIENTS = [
     id: 'flour',
     icon: '🌾',
     name: 'Stone-Ground Flour',
-    image: '/Images/About-Us/flour-img.png',
+    image: '/Images/About-Us/flour-img.webp',
     origin: 'Normandy, France',
     description:
       'Milled using centuries-old techniques to preserve the essential nutrients and rustic character of the grain.',
@@ -30,7 +30,7 @@ const INGREDIENTS = [
     id: 'butter',
     icon: '🧈',
     name: 'Grass-Fed Gold',
-    image: '/Images/About-Us/butter.png',
+    image: '/Images/About-Us/butter.webp',
     origin: 'Normandy, France',
     description:
       "Cultured butter from Normandy, churned slowly to achieve a fat content that creates the ultimate flaky lamination in our croissants.",

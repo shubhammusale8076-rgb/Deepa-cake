@@ -20,24 +20,7 @@
 
   --border-outline-variant: rgba(103, 91, 88, 0.244);
 
-  /* --bg-surface: #FFF8F6;
---bg-surface-container-lowest: #FFFFFF;
---bg-surface-container-low: #FDF1EC;
---bg-surface-container: #F8E6E0;
---bg-surface-container-high: #F1D9D2;
---bg-header: rgba(255, 255, 255, 0.7);
 
---text-on-surface: #D4A72C;
---text-on-surface-variant: #5C4A45;
---text-primary-accent: #7A5C54;
-
---color-secondary: #D4A72C;
---text-on-secondary: #FFFFFF;
-
---whatsapp-bg: #25D366;
---whatsapp-text: #FFFFFF;
-
---border-outline-variant: rgba(120, 100, 95, 0.25); */
 
   /* Typography */
   --font-headline: 'Noto Serif', serif;
@@ -321,6 +304,36 @@ button, .btn {
   justify-content: center;
   align-items: center;
   gap: var(--spacing-4);
+}
+
+
+/* --- FooterCta --- */
+.footer-section {  
+  background-image: 
+     radial-gradient(ellipse at 60% 40%, rgba(43, 30, 26, 0.65) 0%, transparent 70%),
+    linear-gradient(160deg, rgba(28, 17, 13, 0.92) 0%, rgba(28, 17, 13, 0.4) 100%),
+      url('/Images/product_golden_shortbread.webp'); 
+  height: 80vh;
+  text-align: center;
+  padding: var(--spacing-32);
+  position: relative;
+}
+
+.footer-section:before {
+    content: "";
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
 }
 
 

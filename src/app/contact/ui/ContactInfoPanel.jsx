@@ -133,26 +133,24 @@ export default function ContactInfoPanel() {
       {/* ── Contact Details ── */}
       <div className="contact-details-wrapper">
         <div className="contact-detail-img-wrapper">
-          <img src="/images/product_sea_salt_cookies.png" alt="cookies Image" />
+          <img src="/images/product_sea_salt_cookies.webp" alt="cookies Image" />
             <div className="contact-detail-img-overlay"></div>
         </div>
         <div className="contact-detail-card-wrapper">
           <div className="contact-detail-card">
-            <p className="detail-card-label">The Flagship</p>
             <h3 className="detail-card-title">Paris Boutique</h3>
             <p className="detail-card-value">
               42 Rue de Rivoli<br />
-              75004 Paris, France
+              75004 Paris, Solpaur
             </p>
           </div>
           <div className="contact-detail-card">
-            <p className="detail-card-label">Direct Liaison</p>
             <h3 className="detail-card-title">Reach Us Directly</h3>
             <p className="detail-card-value">
-              <a href="tel:+33142741234">+33 (0) 1 42 74 12 34</a>
+              <a href="tel:+33142741234">+91 7218608016</a>
               <br />
-              <a href="mailto:concierge@artisancakery.com">
-                concierge@artisancakery.com
+              <a href="mailto:deepachocotales@gmail.com">
+                deepachocotales@gmail.com
               </a>
             </p>
           </div>

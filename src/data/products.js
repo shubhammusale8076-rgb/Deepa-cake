@@ -1,3 +1,5 @@
+import { images } from '@/data/imageMap';
+
 export const productsData = [
   {
     id: 1,
@@ -10,47 +12,86 @@ export const productsData = [
   },
   {
     id: 2,
-    title: 'Sea Salt Sensation',
-    subtitle: 'Guerande Salt • 70% Dark Chunk',
-    description: 'Thick, chewy cookies packed with hand-chopped Belgian chocolate and finished with a delicate dusting of Maldon sea salt flakes.',
-    image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1000&auto=format&fit=crop',
-    price: "₹349",
-    category: "Biscuits"
+    title: "Mango Delight",
+    subtitle: "Alphonso Mango • Fresh Cream",
+    description: "A refreshing tropical treat made with soft vanilla sponge layered with rich Alphonso mango pulp and light whipped cream, finished with a smooth mango glaze and delicate cream accents.",
+    image: images.mango_cake.src,
+    price: "₹849",
+    category: "Cakes"
   },
   {
     id: 3,
-    title: 'Royal Pistachio',
-    subtitle: 'Sicilian Pistachio • Fine Shortcrust',
-    description: 'A luscious pistachio cream encased in a delicate, buttery shortcrust pastry, topped with crushed roasted pistachios.',
-    image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=1000&auto=format&fit=crop',
-    price: "₹450",
-    category: "Cookies"
+    title: "KitKat Crunch",
+    subtitle: "Chocolate Layers • Wafer Crisp",
+    description: "A rich chocolate sponge layered with silky chocolate cream, wrapped in crunchy KitKat bars and topped with a smooth ganache and chocolate shards for the perfect balance of creaminess and crunch.",
+    image: images.kitkat_cake.src,
+    price: "₹899",
+    category: "Custom"
   },
   {
     id: 4,
     title: 'Ruby Rose',
     subtitle: 'Ruby Cocoa • Damask Rose Essence',
     description: 'A visually stunning creation made from naturally pink ruby chocolate infused with a light, aromatic damask rose essence.',
-    image: 'https://images.unsplash.com/photo-1571115177098-24c42de1bd15?q=80&w=1000&auto=format&fit=crop',
+    image: images.rose_cake.src,
     price: "₹999",
-    category: "Cakes"
+    category: "Custom"
   },
   {
     id: 5,
-    title: 'Ember Vanilla',
-    subtitle: 'Smoked Bean • Toasted Meringue',
-    description: 'A modern classic featuring Madagascar vanilla bean sponge layered with a hint of natural smoke, crowned with peaks of toasted Italian meringue.',
-    image: 'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=1000&auto=format&fit=crop',
-    price: "₹799",
+    title: "Chocolate Nutella",
+    subtitle: "Rich Cocoa • Nutella Drizzle",
+    description: "A decadent chocolate sponge layered with smooth Nutella cream, finished with a glossy chocolate ganache, delicate piping, and topped with chocolate pearls for a rich, indulgent experience.",
+    image: images.chocolate_nutella.src,
+    price: "₹899",
     category: "Cakes"
   },
   {
     id: 6,
-    title: 'Truffle Box',
-    subtitle: '24k Gold • Ganache • Cognac',
-    description: 'An assorted selection of ultra-rich dark chocolate truffles filled with smooth, Cognac-infused ganache and dusted with edible 24k gold.',
-    image: 'https://images.unsplash.com/photo-1548888998-f5eabe47b337?q=80&w=1000&auto=format&fit=crop',
-    price: "₹599",
-    category: "Gifts" 
+    title: 'Chocolate Strawberry Cake',
+    subtitle: "Rich Chocolate • Fresh Strawberry",
+    description: "A luscious chocolate sponge layered with smooth chocolate cream and fresh strawberry compote, finished with a glossy ganache and topped with juicy strawberries for a perfect balance of rich and fruity flavors.",
+    image: images.Chocolate_strawberry_cake.src,
+    price: "₹899",
+    category: "Cakes"
   },
+
+  {
+    id: 7,
+    title: "Black Forest Classic",
+    subtitle: "Dark Chocolate • Cherry Layers",
+    description: "A timeless delight featuring layers of moist chocolate sponge soaked in cherry syrup, filled with fresh whipped cream and cherries, and finished with chocolate shavings for a rich, classic taste.",
+    image: images.black_forest_cake.src,
+    price: "₹799",
+    category: "Cakes"
+  },
+  {
+    id: 8,
+    title: "Velvet Vanilla",
+    subtitle: "Classic Bean • Smooth Cream",
+    description: "A soft and airy vanilla sponge infused with premium vanilla bean, layered with silky whipped cream and finished with a clean, elegant frosting for a light and timeless flavor.",
+    image: images.vanilla_cake.src,
+    price: "₹749",
+    "category": "Cakes"
+  },
+  {
+    id: 9,
+    title: "Rose Blossom",
+    subtitle: "Floral Essence • Cream Swirls",
+    description: "A delicately flavored cake infused with subtle rose essence, layered with smooth cream and adorned with elegant rose-style frosting for a soft, aromatic, and visually stunning experience.",
+    image: images.candle_cake.src,
+    price: "₹849",
+    "category": "Cakes"
+  },
+  {
+    id: 10,
+    title: "Baby Bliss Cake",
+    subtitle: "Fondant Art • Celebration Theme",
+    description: "A charming celebration cake featuring smooth fondant finish, adorned with adorable baby booties and pastel accents, perfect for baby showers and special announcements. Soft sponge layers paired with creamy frosting make it as delightful in taste as it is in design.",
+    image: images.baby_bliss_cake.src,
+    price: "₹999",
+    category: "Custom"
+  }
+
+
 ];

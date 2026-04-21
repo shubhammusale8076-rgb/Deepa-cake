@@ -1,15 +1,21 @@
 import React from 'react';
 
 const testimonials = [
-  { id: 1, 
-    name: "Sarah L.",
-    text: "The Velvet Noir was the centerpiece of our anniversary. It didn't just taste divine; it was a piece of art." },
-  { id: 2, 
-    name: "Mark T.",
-    text: "The best biscuits I've had outside of Paris. The texture of the Golden Shortbread is absolutely incomparable." },
-  { id: 3, 
-    name: "Emily R.",
-    text: "The ordering process via WhatsApp was seamless. They customized the cookie box exactly as I requested." }
+  { 
+    id: 1, 
+    name: "Priya S.",
+    text: "The chocolate truffle cake was the highlight of our anniversary celebration. It looked stunning and tasted even better!" 
+  },
+  { 
+    id: 2, 
+    name: "Shubham M.",
+    text: "The nankhatai biscuits reminded me of homemade treats from my childhood. Perfect texture and not overly sweet." 
+  },
+  { 
+    id: 3, 
+    name: "Anjali K.",
+    text: "Ordering via WhatsApp was super convenient. They customized my cake exactly how I wanted for my daughter's birthday." 
+  }
 ];
 
 export default function Testimonials() {
@@ -20,7 +26,7 @@ export default function Testimonials() {
       <div className="testimonials-grid">
         {testimonials.map((t) => (
           <div key={t.id} className="testimonial-card">
-            <p className="testimonial-text">"{t.text}"</p>
+          <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
             <div className='text-wrapper'>
               <h4 className='text-accent'>{t.name}</h4>
             </div>

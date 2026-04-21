@@ -1,6 +1,5 @@
 "use client"
 
-
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
@@ -35,6 +34,8 @@ Please assist me. Thank you!`;
 
     window.open(url, "_blank", "noopener,noreferrer");
   }
+
+
   return (
     <section
       className="hero-section parallax-bg"

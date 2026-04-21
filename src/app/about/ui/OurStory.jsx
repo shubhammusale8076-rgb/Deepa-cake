@@ -4,7 +4,7 @@ export default function OurStory() {
       <div className="about-story-grid">
         {/* Text Column */}
         <div className="about-story-text">
-          <p className="about-story-label">Est. 1994</p>
+          <p className="about-story-label">Est. 2020</p>
           <h2 className="about-story-title">
             A Legacy of <em>Flour</em> &amp; Cinematic Wonder
           </h2>
@@ -32,13 +32,13 @@ export default function OurStory() {
         {/* Image Column */}
         <div className="about-story-image-wrap">
           <img
-            src="/images/herobg.png"
+            src="/images/herobg.webp"
             alt="The Cinematic Pâtisserie atelier interior"
           />
           <div className="about-story-image-overlay" aria-hidden="true" />
           <div className="about-story-year-badge">
             <span>Founded</span>
-            1994
+            2020
           </div>
         </div>
       </div>

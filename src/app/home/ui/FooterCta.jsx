@@ -28,7 +28,7 @@ Please assist me. Thank you!`;
     window.open(url, "_blank", "noopener,noreferrer");
   }
   return (
-    <footer className="footer-section parallax-bg ">
+    <footer className="footer-section parallax-bg">
       <h2>Make every celebration <br /><span>special</span></h2>
       <div className="footer-actions">
         <button className='btn-primary' onClick={handleClick}>Explore Cakes</button>

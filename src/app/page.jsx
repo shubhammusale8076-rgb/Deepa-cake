@@ -7,8 +7,17 @@ import Testimonials from '@/app/home/ui/Testimonials';
 import FooterCta from '@/app/home/ui/FooterCta';
 import '@/app/home/Home.css';
 
-export default function Home() {
+export const metadata = {
+  title: "The Cinematic Pâtisserie | Premium Cakes & Cookies",
+  description: "Experience the art of fine baking at The Cinematic Pâtisserie. Crafting luxury cakes, cookies, and biscuits for your most cherished celebrations.",
+  openGraph: {
+    title: "The Cinematic Pâtisserie | Premium Cakes & Cookies",
+    description: "Experience the art of fine baking at The Cinematic Pâtisserie.",
+    images: ['/images/hero_cake.webp'],
+  },
+};
 
+export default function Home() {
 
   return (
     <>
@@ -17,13 +26,15 @@ export default function Home() {
           title="Crafted for"
           highlight="Celebrations"
           subtitle="Premium cakes, cookies, and biscuits made with love"
-          backgroundImage="/images/herobg.png"
+          backgroundImage="/images/herobg.webp"
           primaryText="Explore Cakes"
           secondaryText="Quick Order on WhatsApp"
         />
         <CategoryList />
 
         <section className="featured-products">
+
+          <h1 className='featured-product-title'>Our Products</h1>
           <div className="featured-container">
             <ProductCard
               subtitle="The Masterpiece"

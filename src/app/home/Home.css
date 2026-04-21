@@ -84,6 +84,9 @@
   background-color: var(--bg-surface);
 }
 
+.featured-products .featured-product-title{
+  margin-bottom: 2rem;
+}
 
 .product-card {
   display: flex;
@@ -194,7 +197,7 @@
   align-items: center;
   text-align: center;
    background-image: linear-gradient(rgba(0, 0, 0, 0.604), rgba(0, 0, 0, 0.604)), 
-   url('/images/product_velvet.png');
+   url('/images/product_velvet.webp');
 
 }
 
@@ -247,11 +250,13 @@
   padding: var(--spacing-32) ;
 }
 
-.testimonials-section .text-subtitle{
+.testimonials-section .text-subtitle,
+.featured-products .featured-product-title{
     color: var(--color-secondary);
   letter-spacing: 2.5;
   text-transform: uppercase;
   font-size: var(--text-xs);  
+   text-align: center;
 }
 .testimonials-title {
   margin-bottom: var(--spacing-16);
@@ -306,34 +311,6 @@
 }
 
 
-/* --- FooterCta --- */
-.footer-section {  
-  background-image: 
-     radial-gradient(ellipse at 60% 40%, rgba(43, 30, 26, 0.65) 0%, transparent 70%),
-    linear-gradient(160deg, rgba(28, 17, 13, 0.92) 0%, rgba(28, 17, 13, 0.4) 100%),
-      url('/Images/product_golden_shortbread.png'); 
-  height: 80vh;
-  text-align: center;
-  padding: var(--spacing-32);
-  position: relative;
-}
-
-.footer-section:before {
-    content: "";
-    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
-    height: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.footer-actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-8);
-}
 
 /* Small Mobile */ 
 @media (max-width: 480px) {

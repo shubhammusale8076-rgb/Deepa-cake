@@ -6,7 +6,7 @@ import React from 'react';
 
 
 const categories = [
-  { id: 1, name: 'Cakes', image: '/images/Cake_Image.png' },
+  { id: 1, name: 'Cakes', image: '/images/Cake_Image.webp' },
   { id: 2, name: 'Cookies', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=800&auto=format&fit=crop' },
   { id: 3, name: 'Biscuits', image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800&auto=format&fit=crop' },
 ];

@@ -9,7 +9,6 @@ const STEPS = [
   { id: 2, label: "Event" },
   { id: 3, label: "Cake" },
   { id: 4, label: "Vision" },
-  { id: 5, label: "Budget" },
 ];
 
 const FLAVOURS = [
@@ -174,10 +173,10 @@ function StepCake({ data, onChange, onToggle }) {
   );
 }
 
-function StepVision({ data, onChange, onFileChange, files, dragging, onDragEnter, onDragLeave, onDrop }) {
+function StepVision({ data, onChange, onFileChange, files, dragging, onDragEnter, onDragLeave, onDrop, agreed, onAgreeChange }) {
   return (
     <div className="order-fields">
-      <div className="order-field">
+      {/* <div className="order-field">
         <label>Upload Mood Boards or Sketches</label>
         <div
           className={`upload-zone${dragging ? " dragging" : ""}`}
@@ -199,11 +198,8 @@ function StepVision({ data, onChange, onFileChange, files, dragging, onDragEnter
             ))}
           </div>
         )}
-      </div>
-      <div className="order-field">
-        <label htmlFor="colourPalette">Colour Palette / Theme</label>
-        <input id="colourPalette" name="colourPalette" type="text" placeholder="e.g. Ivory, Dusty Rose, Gold leaf accents" value={data.colourPalette} onChange={onChange} />
-      </div>
+      </div> */}
+
       <div className="order-field">
         <label htmlFor="inspiration">Describe Your Vision</label>
         <textarea id="inspiration" name="inspiration" placeholder="Tell us your story — the mood, textures, motifs, or memories you'd like us to translate into sugar and flour…" value={data.inspiration} onChange={onChange} />
@@ -211,38 +207,6 @@ function StepVision({ data, onChange, onFileChange, files, dragging, onDragEnter
       <div className="order-field">
         <label htmlFor="referenceLinks">Reference Links (optional)</label>
         <input id="referenceLinks" name="referenceLinks" type="text" placeholder="Pinterest board, Instagram links, etc." value={data.referenceLinks} onChange={onChange} />
-      </div>
-    </div>
-  );
-}
-
-function StepBudget({ budget, onBudgetChange, agreed, onAgreeChange }) {
-  const percent = ((budget - BUDGET_MIN) / (BUDGET_MAX - BUDGET_MIN)) * 100;
-
-  return (
-    <div className="order-fields">
-      <div className="order-field">
-        <label>Estimated Budget</label>
-        <div className="budget-slider-wrapper" style={{ marginTop: "var(--spacing-6)" }}>
-          <div className="budget-display">
-            ₹{budget.toLocaleString()}
-            <span>INR</span>
-          </div>
-          <input
-            type="range"
-            className="order-range"
-            min={BUDGET_MIN}
-            max={BUDGET_MAX}
-            step={250}
-            value={budget}
-            onChange={onBudgetChange}
-            style={{ "--range-fill": `${percent}%` }}
-          />
-          <div className="budget-range-labels">
-            <span>₹{BUDGET_MIN.toLocaleString()}</span>
-            <span>₹{BUDGET_MAX.toLocaleString()}+</span>
-          </div>
-        </div>
       </div>
       <div className="order-field">
         <label htmlFor="additionalNotes">Final Notes for Our Artisans</label>
@@ -260,6 +224,50 @@ function StepBudget({ budget, onBudgetChange, agreed, onAgreeChange }) {
   );
 }
 
+// function StepBudget({ budget, onBudgetChange, agreed, onAgreeChange }) {
+//   const percent = ((budget - BUDGET_MIN) / (BUDGET_MAX - BUDGET_MIN)) * 100;
+
+//   return (
+//     <div className="order-fields">
+//       <div className="order-field">
+//         <label>Estimated Budget</label>
+//         <div className="budget-slider-wrapper" style={{ marginTop: "var(--spacing-6)" }}>
+//           <div className="budget-display">
+//             ₹{budget.toLocaleString()}
+//             <span>INR</span>
+//           </div>
+//           <input
+//             type="range"
+//             className="order-range"
+//             min={BUDGET_MIN}
+//             max={BUDGET_MAX}
+//             step={250}
+//             value={budget}
+//             onChange={onBudgetChange}
+//             style={{ "--range-fill": `${percent}%` }}
+//           />
+//           <div className="budget-range-labels">
+//             <span>₹{BUDGET_MIN.toLocaleString()}</span>
+//             <span>₹{BUDGET_MAX.toLocaleString()}+</span>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="order-field">
+//         <label htmlFor="additionalNotes">Final Notes for Our Artisans</label>
+//         <textarea id="additionalNotes" name="additionalNotes" placeholder="Anything else you'd like us to know before we begin the consultation…" />
+//       </div>
+//       <div className="order-terms">
+//         <input type="checkbox" id="agree" checked={agreed} onChange={onAgreeChange} required />
+//         <p className="order-terms-text">
+//           By submitting, you agree to our{" "}
+//           <Link href="/terms">Consultation Terms</Link>.{" "}
+//           A member of our atelier will contact you within 48 hours to discuss your vision in detail.
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
 /* ── Main Form Component ── */
 export default function OrderForm() {
   const [step, setStep] = useState(1);
@@ -267,7 +275,6 @@ export default function OrderForm() {
   const [dragging, setDragging] = useState(false);
   const [files, setFiles] = useState([]);
   const [agreed, setAgreed] = useState(false);
-  const [budget, setBudget] = useState(3000);
 
   const [personal, setPersonal] = useState({ firstName: "", lastName: "", email: "", phone: "", address: "" });
   const [event, setEvent] = useState({ eventType: "", eventDate: "", guestCount: "", venue: "", eventNotes: "" });
@@ -293,11 +300,11 @@ export default function OrderForm() {
     setFiles(Array.from(e.dataTransfer.files));
   }, []);
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  if (!agreed) return;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!agreed) return;
 
-  const message = `CUSTOM CAKE ORDER REQUEST
+    const message = `CUSTOM CAKE ORDER REQUEST
 
 ━━━━━━━━━━━━━━━
 Customer Details
@@ -328,26 +335,21 @@ Design Vision
 • References: ${vision.referenceLinks || "None"}
 
 ━━━━━━━━━━━━━━━
-Budget
-• Estimated Budget: ₹${budget}
-
-━━━━━━━━━━━━━━━
 
 📸 Reference images will be shared in chat.
 
 Please review and confirm. Thank you!`;
 
-  const url = `https://wa.me/917218608016?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/917218608016?text=${encodeURIComponent(message)}`;
 
-  window.open(url, "_blank", "noopener,noreferrer");
-};
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   const STEP_META = [
     { eyebrow: "Step 1 of 5", title: "Personal Information" },
     { eyebrow: "Step 2 of 5", title: "Event Details" },
     { eyebrow: "Step 3 of 5", title: "Cake Specifications" },
     { eyebrow: "Step 4 of 5", title: "Creative Vision" },
-    { eyebrow: "Step 5 of 5", title: "Estimated Budget" },
   ];
 
   if (submitted) {
@@ -358,7 +360,7 @@ Please review and confirm. Thank you!`;
             <span className="order-success-icon">✨</span>
             <h2 className="order-success-title">Your Vision Has Been Received</h2>
             <p className="order-success-subtitle">
-              A member of our atelier will contact you within 48 hours to begin the 
+              A member of our atelier will contact you within 48 hours to begin the
               bespoke consultation. In the meantime, explore our current collections.
             </p>
             <div className="hero-action-wrapper">
@@ -409,16 +411,17 @@ Please review and confirm. Thank you!`;
               onDragEnter={onDragEnter}
               onDragLeave={onDragLeave}
               onDrop={onDrop}
-            />
-          )}
-          {step === 5 && (
-            <StepBudget
-              budget={budget}
-              onBudgetChange={(e) => setBudget(Number(e.target.value))}
               agreed={agreed}
               onAgreeChange={(e) => setAgreed(e.target.checked)}
             />
           )}
+          {/* {step === 5 && (
+            <StepBudget
+              budget={budget}
+              onBudgetChange={(e) => setBudget(Number(e.target.value))}
+
+            />
+          )} */}
 
           {/* Navigation */}
           <div className="order-nav-buttons">
@@ -431,7 +434,7 @@ Please review and confirm. Thank you!`;
                 ← Previous
               </button>
             )}
-            {step < 5 ? (
+            {step < 4 ? (
               <button
                 type="button"
                 className="btn btn-primary"

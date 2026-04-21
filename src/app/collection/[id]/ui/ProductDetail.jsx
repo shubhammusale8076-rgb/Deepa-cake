@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import "./ProductDetail.css";
+import CustomDropdown from "@/components/CustomDropdown/CustomDropdown";
 
 export default function ProductDetail({
   title,
@@ -56,11 +57,11 @@ export default function ProductDetail({
 
     Kindly fill in your details and confirm the order. Thank you!`;
 
-    const url = `https://wa.me/918766453107?text=${encodeURIComponent(
+    const url = `https://wa.me/917218608016?text=${encodeURIComponent(
       message
     )}`;
 
-   window.open(url, "_blank", "noopener,noreferrer");
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -107,18 +108,16 @@ export default function ProductDetail({
               />
             </div>
 
-            <div className="option-group">
-              <p className="label">TIME SLOT</p>
-              <select
-                className="input"
-                value={timeSlot}
-                onChange={(e) => setTimeSlot(e.target.value)}
-              >
-                <option>Morning (10AM - 1PM)</option>
-                <option>Afternoon (1PM - 5PM)</option>
-                <option>Evening (5PM - 9PM)</option>
-              </select>
-            </div>
+            <CustomDropdown
+              label="TIME SLOT"
+              options={[
+                "Morning (10AM - 1PM)",
+                "Afternoon (1PM - 5PM)",
+                "Evening (5PM - 9PM)",
+              ]}
+              value={timeSlot}
+              onChange={setTimeSlot}
+            />
           </div>
 
           {/* Message */}

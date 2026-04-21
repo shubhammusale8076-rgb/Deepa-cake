@@ -8,7 +8,7 @@ import HeroSection from '@/components/HeroSection';
 import { productsData } from '@/data/products';
 import { useSearchParams } from 'next/navigation';
 
-const filterButton = ["All", "Cakes", "Biscuits", "Cookies"];
+const filterButton = ["All", "Cakes", "Biscuits", "Cookies", "Custom"];
 
 export default function CollectionPage() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -32,7 +32,7 @@ export default function CollectionPage() {
         title="Our"
         highlight="Collection"
         subtitle="Crafted delights for every occasion"
-        backgroundImage="/images/hero_cake.png"
+        backgroundImage="/images/hero_cake.webp"
       />
 
       <div className="collection-filter-wrapper">

@@ -3,7 +3,7 @@ const ARTISANS =
     id: 'julien',
     name: 'Julien Vasseur',
     role: 'Executive Pastry Chef',
-    image: '/images/product_truffle_box.png',
+    image: '/images/product_truffle_box.webp',
     bio: "A master of structural pastry, Julien brings his background in architecture to every towering macaron display and multi-tiered cake.",
     signture:""
   

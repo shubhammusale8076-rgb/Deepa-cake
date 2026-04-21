@@ -15,10 +15,10 @@ export default function AboutPage() {
   return (
     <main className="about-page">
       <HeroSection
-        title="The Art of the "
-        highlight="Pâtissier"
-        subtitle="Founded in the heart of a forgotten theater district — we treat every pastry as a scene-stealing performance."
-        backgroundImage="/images/about-us.png"
+        title="The Art of "
+        highlight="Fine Baking"
+        subtitle="Blending timeless techniques with modern creativity, we craft desserts that are as refined in taste as they are in design."
+        backgroundImage="/images/about-us.webp"
       />
       <OurStory />
       <Craftsmanship />

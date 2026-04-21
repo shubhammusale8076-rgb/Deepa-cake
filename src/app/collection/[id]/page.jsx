@@ -10,17 +10,15 @@ export default async function ProductPage({ params }) {
 
   return (
     <main className="detail-page">
-      <section className="detail-section">
         <div className="detail-container">
           <ProductDetail
             title={productInfo.title}
             subtitle={productInfo.subtitle}
             description={productInfo.description}
-            price={productInfo.price}
+            price={productInfo.price} 
             image={productInfo.image}
           />
         </div>
-      </section>
 
       <FooterCta />
     </main>
