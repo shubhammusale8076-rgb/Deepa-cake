@@ -6,7 +6,6 @@ import FooterCta from '@/app/home/ui/FooterCta';
 import './Collection.css';
 import HeroSection from '@/components/HeroSection';
 import { productsData } from '@/data/products';
-import { useSearchParams } from 'next/navigation';
 
 const filterButton = ["All", "Cakes", "Biscuits", "Cookies", "Custom"];
 
