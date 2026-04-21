@@ -30,7 +30,7 @@ Please assist me. Thank you!`;
         <button className="btn btn-whatsapp" onClick={handleWhatsAppMessage}>CHAT WITH US ON WHATSAPP</button>
       </div>
       <div className="cta-image-wrapper">
-        <img src="/images/cta-image.png" alt="" />
+        <img src="/images/cta-image.webp" alt="" />
       </div>
     </section>
   );
