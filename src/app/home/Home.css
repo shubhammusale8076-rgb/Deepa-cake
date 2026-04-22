@@ -333,6 +333,10 @@
   .cta-section .cta-content, .cta-section .cta-image-wrapper {
     width: 100%;
   }
+
+  .testimonials-section {
+        padding: var(--spacing-12) var(--spacing-8);
+    }
   .footer-section {
     height: auto;
     padding: var(--spacing-20) var(--spacing-6);
@@ -350,6 +354,9 @@
   .product-image-container {
     height: 450px;
   }
+    .testimonials-section {
+        padding: var(--spacing-12) var(--spacing-8);
+    }
   .cta-section {
     flex-direction: column;
     padding: var(--spacing-16) var(--spacing-8);
@@ -363,6 +370,14 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .product-info {
     padding: var(--spacing-10);
+  }
+
+    .testimonials-section {
+        padding: var(--spacing-12) var(--spacing-8);
+    }
+
+      .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .cta-section {
     padding: var(--spacing-20) var(--spacing-12);
